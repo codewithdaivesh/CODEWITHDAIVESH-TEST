@@ -10,7 +10,7 @@ const Navbar = () => {
         <nav class="navbar navbar-expand-lg navbar-light navbar-bg fixed-top py-1">
           <div class="container">
             <a class="navbar-brand" href="#">
-              Daivesh
+             <img src="./assets/img/logo.png"></img>
             </a>
             <button
               class="navbar-toggler"

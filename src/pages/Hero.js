@@ -25,7 +25,7 @@ const Hero = () => {
                                 </p>
 
                                 <div className="social-icon gap-3">
-                                    <a href="https://www.facebook.com/daiveshs">
+                                    <a href="https://www.facebook.com/codewithdaivesh">
                                         <i class="bi bi-facebook" ></i>
                                     </a>
 
@@ -33,7 +33,7 @@ const Hero = () => {
                                         <i class="bi bi-instagram"></i>
                                     </a>
 
-                                    <a href="https://twitter.com/daiveshsuryawa">
+                                    <a href="https://twitter.com/codewithdaivesh">
                                         <i class="bi bi-twitter"></i>
                                     </a>
 
