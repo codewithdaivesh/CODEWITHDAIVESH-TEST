@@ -1,0 +1,595 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+/* custom colors  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --bgcolor: #eee;
+  --primary-color: #BC3248;
+  --text-color: #111;
+  --main-text-color: #353B48;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+/* --------------------------------- navbar css style starts 
+                        -------------------------------------------------------*/
+
+.navbar-bg {
+  background-color: var(--bgcolor);
+  padding: 2rem 0;
+  z-index: 99;
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 2.5rem !important;
+}
+
+.navbar li {
+  padding: 0 2rem;
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  position: relative;
+}
+
+.navbar li a:hover {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0.2rem 0.3rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+
+.btn-style:first-child {
+  margin-right: 2rem;
+}
+
+.btn-style:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border {
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.btn-style-border:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+/* --------------------------------- Navbar ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Hero sEction  starts  
+                        -------------------------------------------------------*/
+header {
+  background-color: var(--bgcolor);
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  margin-top: -4rem;
+}
+
+.main-heading{
+  font-size: 4rem;
+}
+
+
+.hero-title{
+  font-size: 2.5rem;
+  margin: 2.5rem 0;
+  font-weight: bolder;
+}
+
+.hero-para{
+  font-size: 1.8rem;
+}
+
+.social-icon{
+  margin: 2.5rem;
+  font-size: 2.5rem ;
+}
+
+.social-icon [class*="bi bi-facebook"] {
+  color: #4267B2;
+  margin: 0 1rem;
+ 
+} 
+.social-icon [class*="bi bi-instagram"] {
+  color: #cc2366;
+  margin: 0 1rem;
+} 
+.social-icon [class*="bi bi-twitter"] {
+  color: #00acee;
+  margin: 0 1rem;
+} 
+.social-icon [class*="bi bi-linkedin"] {
+  color: #0e76a8;
+  margin: 0 1rem;
+} 
+.social-icon [class*="bi bi-github"] {
+  color: #171515;
+  margin: 0 1rem;
+}
+
+/* right side of hero section  */
+
+
+
+@media screen and (max-width: 480px) {
+  .main-heading{
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+  
+}
+/* --------------------------------- Hero sEction  ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Work Section below hero section   starts  
+                        -------------------------------------------------------*/
+
+.work-container {
+  width: 80vw;
+  padding: 5rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
+  margin-top: -10rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.work-container .main-heading {
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+  word-spacing: 1rem;
+}
+
+.work-container-subdiv {
+  padding: 0 6rem;
+  margin: 1rem 0;
+}
+
+.work-container .sub-heading {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--bgcolor);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+/* --------------------------------- Work Section below hero section   ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- About Us Section STarts  
+                        -------------------------------------------------------*/
+.common-section {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 10rem 0;
+}
+
+.our-services img {
+  width: 350px;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.8rem 0.8rem;
+  border-radius: 1.5rem;
+}
+
+.our-services .mini-title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 1rem 0;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.our-services .main-heading {
+  font-weight: bolder;
+}
+
+
+
+.our-services-para {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-weight: lighter;
+  width: 75%;
+}
+
+
+
+.our-services-data {
+  padding-left: 2rem;
+}
+
+/* .our-services .our-services-data p {
+  margin: 1rem 0;
+} */
+
+/*===== About me ===== */
+
+.our-services .our-services-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+.aboutme-para{
+  font-size: 1.4rem;
+}
+
+
+@media screen and (max-width: 480px) {
+  .our-services-para {
+    
+    width: 90%;
+  }
+}
+
+/* --------------------------------- About Us Section ends  
+                        -------------------------------------------------------*/
+/* --------------------------------- Services Section starts  
+                        -------------------------------------------------------*/
+
+.service-main-container {
+  margin-top: 5rem;
+  padding: 5rem 0;
+}
+
+.service-main-container .main-heading {
+  margin: 3rem 0;
+  text-align: center;
+  align-items: center;
+}
+
+.service-main-container .sub-heading {
+  margin: 3rem 0;
+  text-align: center;
+  align-items: center;
+}
+
+.service-para{
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+.work-container-subdiv {
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.16);
+}
+
+.work-container-subdiv:hover {
+  background-color: var(--bgcolor);
+  cursor: pointer;
+}
+
+.work-container-subdiv:hover > .fontawesome-style {
+  background-color: #fff;
+}
+
+.work-container-subdiv .main-hero-para {
+  width: 100%;
+}
+
+.service-main-container .work-container-subdiv .fontawesome-style {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1400px) {
+  .service-container .col-xxl-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin:1rem auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-container .col-lg-4 {
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+
+
+/* portfolio */
+
+
+
+.cate-btn .btn-style-border{
+ margin: 0 1.5rem;
+}
+
+.work-img{
+  width: 100%;
+  height: 40vh;
+}
+
+/* portfolio end */
+
+/* --------------------------------- Services Section ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Contact US Section starts  
+                        -------------------------------------------------------*/
+.conatct-heading{
+  margin: 7rem 0;
+  font-size: 3rem;
+}
+.contactus-section {
+  margin: 1rem 0;
+}
+
+.contact-leftside {
+  margin-bottom: 3rem;
+}
+
+.contact-input-feild {
+  margin-bottom: 4rem;
+}
+
+.contact-rightside form .form-control {
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  font-weight: lighter;
+}
+
+.contact-rightside form .form-check-input {
+  width: 2rem;
+  height: 2rem;
+}
+
+.form-checkbox-style {
+  margin: 4rem 0;
+}
+
+ .contact-para {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 0;
+  font-weight: lighter;
+  padding:  2rem 0;
+}
+.contact-info{
+  font-size: 1.5rem;
+}
+.simpleCircle [class*="bi bi-"] {
+    
+  background-color: var(--main-text-color);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin: auto 3px;
+  width: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+/* --------------------------------- Contact US Section ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- Footer  Section starts  
+                        -------------------------------------------------------*/
+
+footer {
+  margin-top: 4rem;
+  padding: 1rem 0;
+  background-color: var(--main-text-color);
+  color: #fff;
+  width: 100%;
+}
+
+.footer-text{
+  font-size: 1.4rem;
+  color: #fff;
+  bottom: 0;
+}
+
+@keyframes rotatefont {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+footer .main-hero-para {
+  margin: 0;
+}
+
+/* --------------------------------- Footer  Section ends  
+                        -------------------------------------------------------*/
+
+/* --------------------------------- 404 Error Page Section 
+                        -------------------------------------------------------*/
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 276px;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 46px;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.notfound p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.notfound a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #189cf0;
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 400;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  background-color: #fff;
+  border-color: #189cf0;
+  color: #189cf0;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+  .notfound h2 {
+    font-size: 26px;
+  }
+}
+
+/* --------------------------------- 404 Error Page Section  Ends
+                        -------------------------------------------------------*/
+
+/* --------------------------------- responsive media queries  
+                        -------------------------------------------------------*/
+@media (min-width: 1500px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1400px;
+  }
+}
