@@ -1,64 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const [userData, setUserData] = useState({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        address: "",
-        message: "",
-    });
 
-    let name, value;
-    const postUserData = (event) => {
-        name = event.target.name;
-        value = event.target.value;
+  
 
-        setUserData({ ...userData, [name]: value });
+ 
+
+    // email server sending mail 
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_uqayekf', 'template_460q3bi', form.current, 'user_kUYP97Fv6vU5MDLn55qwx')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     };
 
-    // connect with firebase
-    const submitData = async (event) => {
-        event.preventDefault();
-        const { firstName, lastName, phone, email, subject, message } = userData;
+   
 
-        if (firstName && lastName && phone && email && subject && message) {
-            const res = fetch(
-                "https://contactdb-daivesh-default-rtdb.firebaseio.com/contactdb-daivesh",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        firstName,
-                        lastName,
-                        phone,
-                        email,
-                        subject,
-                        message,
-                    }),
-                }
-            );
-
-            if (res) {
-                setUserData({
-                    firstName: "",
-                    lastName: "",
-                    phone: "",
-                    email: "",
-                    subject: "",
-                    message: "",
-                });
-                alert("Thank you for contacting Daivesh Vijay Suryawanshi ! Please let us know how we can help you.");
-            } else {
-                alert("plz fill the data");
-            }
-        } else {
-            alert("plz fill the data");
-        }
-    };
+  
+    
 
     return (
         <>
@@ -102,54 +68,33 @@ const Contact = () => {
 
                                 {/* right side contact form  */}
                                 <div className="contact-rightside col-12 col-lg-7">
-                                    <form method="POST"
+                                    <form method="POST" ref={form} onSubmit={sendEmail} 
                                     >
                                         <div className="row">
-                                            <div className="col-12 col-lg-6 contact-input-feild">
-                                                <input
+                                            <div className="col-12 col-lg-12 contact-input-feild">
+                                            <input
                                                     type="text"
-                                                    name="firstName"
+                                                    name="user_name"
                                                     id=""
                                                     className="form-control"
-                                                    placeholder="First Name"
-                                                    value={userData.firstName}
-                                                    onChange={postUserData}
+                                                    placeholder="Full Name"
+                        
                                                 />
                                             </div>
-                                            <div className="col-12 col-lg-6 contact-input-feild">
-                                                <input
-                                                    type="text"
-                                                    name="lastName"
-                                                    id=""
-                                                    className="form-control"
-                                                    placeholder="Last Name"
-                                                    value={userData.lastName}
-                                                    onChange={postUserData}
-                                                />
-                                            </div>
+                                           
                                         </div>
                                         <div className="row">
-                                            <div className="col-12 col-lg-6 contact-input-feild">
+                                            
+                                            <div className="col-12 col-lg-12 contact-input-feild">
                                                 <input
-                                                    type="text"
-                                                    name="phone"
+                                                    type="email"
+                                                    name="user_email"
                                                     id=""
                                                     className="form-control"
-                                                    placeholder="Phone Number "
-                                                    value={userData.phone}
-                                                    onChange={postUserData}
+                                                    placeholder="Email Address"
+                        
                                                 />
-                                            </div>
-                                            <div className="col-12 col-lg-6 contact-input-feild">
-                                                <input
-                                                    type="text"
-                                                    name="email"
-                                                    id=""
-                                                    className="form-control"
-                                                    placeholder="Email ID"
-                                                    value={userData.email}
-                                                    onChange={postUserData}
-                                                />
+                                                
                                             </div>
                                         </div>
                                         <div className="row">
@@ -160,8 +105,7 @@ const Contact = () => {
                                                     id=""
                                                     className="form-control"
                                                     placeholder="Subject"
-                                                    value={userData.subject}
-                                                    onChange={postUserData}
+                                                    
                                                 />
                                             </div>
                                         </div>
@@ -174,18 +118,13 @@ const Contact = () => {
                                                     id=""
                                                     className="form-control"
                                                     placeholder="Enter Your Message"
-                                                    value={userData.message}
-                                                    onChange={postUserData}
+                                                  
                                                 />
                                             </div>
                                         </div>
+
                                         <div class="form-check form-checkbox-style">
-                                            <button
-                                                type="submit"
-                                                className="btn btn-style w-100"
-                                                onClick={submitData}>
-                                                Submit
-                                            </button>
+                                        <input type="submit" value="Send" className="btn btn-style w-100"  />
                                         </div>
 
 

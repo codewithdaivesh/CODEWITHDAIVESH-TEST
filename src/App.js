@@ -10,9 +10,9 @@ import Navbar from './pages/Navbar';
 import Home from "./pages/Home";
 import Aboutus from './pages/Aboutus';
 import Services from './pages/Service';
-import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Portfolio from './pages/Portfolio';
+import  Contact  from './pages/Contact';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
       <Route path="course" element={<Portfolio />} />
       <Route path="service" element={<Services />} />
       <Route path="contact" element={<Contact />} />
+      
     </Routes>
 
     <Footer/>
